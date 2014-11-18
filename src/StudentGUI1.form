@@ -69,9 +69,9 @@
                               <Component id="lbltest1" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="lbltest2" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="lbltest3" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblavg" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="AVERAGE" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <Component id="txtname" min="-2" pref="178" max="-2" attributes="0"/>
@@ -79,7 +79,11 @@
                               </Group>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="txtavg" max="32767" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <Component id="lblavg" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="txtavg" max="32767" attributes="0"/>
+                                      </Group>
                                       <Component id="txttest3" alignment="0" pref="88" max="32767" attributes="0"/>
                                       <Component id="txttest1" alignment="0" max="32767" attributes="0"/>
                                       <Component id="txttest2" alignment="0" max="32767" attributes="0"/>
@@ -97,7 +101,7 @@
                           <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnfirst" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
                                   <Component id="btnprev" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
@@ -113,7 +117,7 @@
                               <Group type="102" attributes="0">
                                   <Component id="btnfwd" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="jButton4" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnlast" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
@@ -154,15 +158,18 @@
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="lblavg" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblavg" alignment="3" max="32767" attributes="0"/>
+                          <Component id="AVERAGE" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                       <Component id="txtavg" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnfirst" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnprev" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnfwd" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnlast" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -224,12 +231,12 @@
         </Component>
         <Component class="javax.swing.JLabel" name="txtavg">
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="btnfirst">
           <Properties>
             <Property name="text" type="java.lang.String" value="&lt;&lt;"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnfirstActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnprev">
@@ -248,12 +255,12 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnfwdActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton4">
+        <Component class="javax.swing.JButton" name="btnlast">
           <Properties>
             <Property name="text" type="java.lang.String" value="&gt;&gt;"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnlastActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnadd">
@@ -290,6 +297,11 @@
         <Component class="javax.swing.JTextField" name="lblindex">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="AVERAGE">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Average:"/>
           </Properties>
         </Component>
       </SubComponents>

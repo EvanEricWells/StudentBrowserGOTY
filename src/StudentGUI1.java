@@ -42,16 +42,17 @@ public class StudentGUI1 extends javax.swing.JFrame {
         txttest3 = new javax.swing.JTextField();
         lblavg = new javax.swing.JLabel();
         txtavg = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnfirst = new javax.swing.JButton();
         btnprev = new javax.swing.JButton();
         btnfwd = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        btnlast = new javax.swing.JButton();
         btnadd = new javax.swing.JButton();
         btnmod = new javax.swing.JButton();
         txtcount = new javax.swing.JLabel();
         lblcount = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         lblindex = new javax.swing.JTextField();
+        AVERAGE = new javax.swing.JLabel();
 
         jTextField1.setText("jTextField1");
 
@@ -86,10 +87,10 @@ public class StudentGUI1 extends javax.swing.JFrame {
 
         lblavg.setText("Average");
 
-        jButton1.setText("<<");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnfirst.setText("<<");
+        btnfirst.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnfirstActionPerformed(evt);
             }
         });
 
@@ -107,10 +108,10 @@ public class StudentGUI1 extends javax.swing.JFrame {
             }
         });
 
-        jButton4.setText(">>");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        btnlast.setText(">>");
+        btnlast.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                btnlastActionPerformed(evt);
             }
         });
 
@@ -136,6 +137,8 @@ public class StudentGUI1 extends javax.swing.JFrame {
 
         lblindex.setEditable(false);
 
+        AVERAGE.setText("Average:");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -149,15 +152,18 @@ public class StudentGUI1 extends javax.swing.JFrame {
                             .addComponent(lbltest1)
                             .addComponent(lbltest2)
                             .addComponent(lbltest3)
-                            .addComponent(lblavg))
-                        .addGap(31, 31, 31)
+                            .addComponent(AVERAGE))
+                        .addGap(39, 39, 39)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(txtname, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(txtavg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(lblavg)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(txtavg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addComponent(txttest3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
                                     .addComponent(txttest1, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(txttest2, javax.swing.GroupLayout.Alignment.LEADING))
@@ -170,7 +176,7 @@ public class StudentGUI1 extends javax.swing.JFrame {
                         .addGap(19, 19, 19)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jButton1)
+                                .addComponent(btnfirst)
                                 .addGap(73, 73, 73)
                                 .addComponent(btnprev)
                                 .addGap(49, 49, 49))
@@ -183,7 +189,7 @@ public class StudentGUI1 extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(btnfwd)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton4))
+                                .addComponent(btnlast))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -213,14 +219,16 @@ public class StudentGUI1 extends javax.swing.JFrame {
                     .addComponent(btnadd))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lblavg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblavg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(AVERAGE))
                     .addComponent(txtavg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
+                    .addComponent(btnfirst)
                     .addComponent(btnprev)
                     .addComponent(btnfwd)
-                    .addComponent(jButton4))
+                    .addComponent(btnlast))
                 .addGap(25, 25, 25)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtcount)
@@ -276,9 +284,10 @@ public class StudentGUI1 extends javax.swing.JFrame {
         showStudent();
     }//GEN-LAST:event_btnmodActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void btnfirstActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnfirstActionPerformed
+        currentstudent=0;
+        showStudent();
+    }//GEN-LAST:event_btnfirstActionPerformed
 
     private void btnprevActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnprevActionPerformed
         if (currentstudent > 0) {
@@ -294,9 +303,10 @@ public class StudentGUI1 extends javax.swing.JFrame {
         }        
     }//GEN-LAST:event_btnfwdActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    private void btnlastActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnlastActionPerformed
+        currentstudent=size-1;
+        showStudent();
+    }//GEN-LAST:event_btnlastActionPerformed
     
 
     public void showStudent() {
@@ -306,7 +316,7 @@ public class StudentGUI1 extends javax.swing.JFrame {
         txttest3.setText("" + s[currentstudent].getScore(3));
         lblavg.setText("" + s[currentstudent].getAverage());
         lblcount.setText("" + size);
-        lblindex.setText("" + currentstudent);        
+        lblindex.setText("" + (currentstudent+1));        
     }
 
     /**
@@ -345,12 +355,13 @@ public class StudentGUI1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel AVERAGE;
     private javax.swing.JButton btnadd;
+    private javax.swing.JButton btnfirst;
     private javax.swing.JButton btnfwd;
+    private javax.swing.JButton btnlast;
     private javax.swing.JButton btnmod;
     private javax.swing.JButton btnprev;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
